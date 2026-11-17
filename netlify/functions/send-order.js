@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const ORIGINAL_PRICE = 360000;
+const ORIGINAL_PRICE = 250000;
 const DISCOUNT_PERCENT = 10;
 const COLORS = ["Đen", "Kem", "Đen vân Xanh", "Đen vân Cam", "Đen vân Trắng"];
 const SIZES = ["35", "36", "37", "38", "39", "40", "41", "42"];

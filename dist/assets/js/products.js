@@ -36,7 +36,7 @@ window.KOWIN_PRODUCTS = [
     category: "dep-kep",
     description: "Dép kẹp EVA đế dày với quai liền khối, mũi chia ngón đặc trưng và đế có rãnh. Nhẹ, êm và dễ phối đồ — phù hợp cả trong nhà lẫn ngoài trời.",
     sizes: [35, 36, 37, 38, 39, 40, 41, 42],
-    originalPrice: 360000,
+    originalPrice: 250000,
     salePrice: null,
     discountPercent: 10,
     available: true,
