@@ -951,7 +951,7 @@
       new FormData(form).forEach(function (fieldValue, key) { body.append(key, fieldValue); });
       submit.disabled = true;
       submit.textContent = "ĐANG GỬI ĐƠN…";
-      fetch("/.netlify/functions/send-order", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() })
+      fetch("/api/send-order", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() })
         .then(function (response) {
           return response.text().then(function (responseBody) {
             var data = null;
@@ -960,12 +960,12 @@
             } catch (_) {}
             if (!response.ok) {
               var fallback = response.status === 404
-                ? "Không tìm thấy chức năng gửi đơn. Hãy chạy website bằng Netlify Dev hoặc mở bản đã triển khai."
+                ? "Không tìm thấy API gửi đơn. Hãy kiểm tra cấu hình hosting hoặc thử lại sau."
                 : "Máy chủ gửi đơn phản hồi lỗi (HTTP " + response.status + ").";
               throw new Error(data && data.message || fallback);
             }
             if (!data || typeof data.message !== "string") {
-              throw new Error("Máy chủ gửi đơn không trả về phản hồi hợp lệ. Hãy chạy website bằng Netlify Dev hoặc mở bản đã triển khai.");
+              throw new Error("Máy chủ gửi đơn không trả về phản hồi hợp lệ. Vui lòng thử lại sau.");
             }
           });
         })
