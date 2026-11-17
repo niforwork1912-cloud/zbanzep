@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.5"
+  }
+}
